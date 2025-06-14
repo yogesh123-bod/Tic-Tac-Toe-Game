@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tic Tac Toe Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <header id="modeSelect">
+      <button onclick="selectMode('computer')"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+  <path d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10H3V5z"/>
+  <path d="M0 17h24v2H0v-2z"/>
+</svg>
+ VS <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+  <circle cx="12" cy="8" r="4"/>
+  <path d="M4 20v-1c0-3.3 2.7-6 6-6h4c3.3 0 6 2.7 6 6v1"/>
+</svg>
+</button>
+      <button onclick="selectMode('player')"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+  <circle cx="12" cy="8" r="4"/>
+  <path d="M4 20v-1c0-3.3 2.7-6 6-6h4c3.3 0 6 2.7 6 6v1"/>
+</svg>
+ VS <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+  <circle cx="12" cy="8" r="4"/>
+  <path d="M4 20v-1c0-3.3 2.7-6 6-6h4c3.3 0 6 2.7 6 6v1"/>
+</svg>
+</button>
+    </header>
+
+    <header id="scoreBoard">
+      <div>X Wins: <span id="xScore">0</span></div>
+      <div>O Wins: <span id="oScore">0</span></div>
+      <div>Draws: <span id="drawScore">0</span></div>
+    </header>
+
+    <header id="header">
+      <div class="player" id="xPlayerDisplay" onclick="choosePlayer('X')">X</div>
+      <h3 id="titleHeader">Choose</h3>
+      <div class="player" id="oPlayerDisplay" onclick="choosePlayer('O')">O</div>
+    </header>
+
+    <div id="board">
+      <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+      <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+      <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+    </div>
+
+    <button id="restartBtn">Restart</button>
+  </main>
+
+  <canvas id="fireCanvas"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
